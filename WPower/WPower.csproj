@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>power.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,11 +84,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="hibernate.png" />
-    <Content Include="power.ico" />
-    <Content Include="poweroff.png" />
-    <Content Include="restart.png" />
-    <Content Include="sleep.png" />
+    <EmbeddedResource Include="hibernate.png" />
+    <EmbeddedResource Include="power.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="poweroff.png" />
+    <EmbeddedResource Include="restart.png" />
+    <EmbeddedResource Include="sleep.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
